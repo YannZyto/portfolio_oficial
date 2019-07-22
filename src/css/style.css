@@ -50,7 +50,6 @@ body {
     font-size: 22px;
     font-weight: 100;
     color: #fff;
-    transition: all 2s;
 }
 
 @media (min-width: 901px) {
@@ -83,6 +82,7 @@ body {
 
     .nav-drop {
         display: block;
+        transition: all .5s;
     }
 
     .nav-drop .nav-menu-item, .nav-drop .nav-drop-button {
