@@ -130,12 +130,16 @@ body {
 }
 
 .header-title {
-    font-size: 66px;
+    font-size: 100px;
 }
 
 @media (max-width: 900px) {
     .header-general {
         height: 50vh;
+    }
+
+    .header-title {
+        font-size: 66px;
     }
 }
 
