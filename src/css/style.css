@@ -78,11 +78,13 @@ body {
         width: 100%;
         justify-content: flex-end;
         padding-right: 5%;
+        transition: all 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
     }
 
     .nav-drop {
         display: block;
-        transition: all .5s;
+        overflow: hidden;
+        animation: slide-down-menu 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
     }
 
     .nav-drop .nav-menu-item, .nav-drop .nav-drop-button {
@@ -100,6 +102,15 @@ body {
 
     .nav-menu-link {
         cursor: pointer;
+    }
+}
+
+@keyframes slide-down-menu {
+    0% {
+        height: 50px;
+    }
+    100% {
+        height: 310px;
     }
 }
 
