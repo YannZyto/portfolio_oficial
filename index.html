@@ -9,8 +9,9 @@
     <meta name="description" content="Seja bem-vindo ao meu website! Conheça um pouco sobre mim e caso sinta interesse no meu trabalho, não deixe de entrar em contato!">
     <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="./src/css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
 </head>
-<body>
+<body ng-app='app' ng-controller='ctrl'>  
     <div class='nav-bar'>
             <div class='nav-container'>
                 <ul class='nav-menu' id='nav-menu'>
@@ -51,12 +52,7 @@
                 <div class='about-content'>
                     <div class='about-article'>
                         <p class='p-content about-p'>
-                            Analista de Sistemas desde Agosto de 2018, 
-                            pelo Instituto Federal de Roraima. Comecei 
-                            trilhar de vez o caminho da informática com 
-                            foco em desenvolvimento de sistemas em 2011, 
-                            quando ingressei no curso Técnico em 
-                            Informártica, também pelo IFRR.
+                            {{data.aboutMe[0]}}
                         </p>
                         <img
                             class='img about-img'
@@ -71,22 +67,12 @@
                             alt='Trabalhando em projeto'
                         />
                         <p class='p-content about-p'>
-                            Desde então tenho me aventurado nesse ambiente 
-                            vasto e fantástico da TI, com algumas experiências 
-                            que vão da participação em programa de incentivo 
-                            ao desenvolvimento tecnológico promovidos pela 
-                            prefeitura de Boa Vista - RR através da criação 
-                            de apps voltados à soluções sociais, até criação 
-                            de jogos na engine Unity3D.
+                            {{data.aboutMe[1]}}
                         </p>
                     </div>
                     <div class='about-article'>
                         <p class='p-content about-p'>
-                            Atualmente tenho desenvolvido uma paixão enorme 
-                            por tecnologias com base em JavaScript como NodeJs, 
-                            ReactJS e React Native. Devido a isso tenho focado 
-                            os meus estudos nessas tecnologias, porém estou 
-                            sempre aberto a novos desafios.
+                            {{data.aboutMe[2]}}
                         </p>
                         <img
                             class='img about-img'
@@ -135,24 +121,18 @@
                         alt='imagem de perfil' 
                     />
                     <h1 class='title my-name-title'>
-                        Iam Barroso da Costa
+                        {{data.cv.info.name}}
                     </h1>
                     <p class='p-content'>
-                        Brasileiro, 22 anos, Solteiro
+                        {{data.cv.info.status}}
                     </p>
                     <div class='cv-lang-abilities-container'>
                         <div class='cv-card'>
                             <h2 class='subtitle' style='margin-bottom: 15px'>
                                 Idiomas:
                             </h2>
-                            <p class='p-content'>
-                                Português (Nativo)
-                            </p>
-                            <p class='p-content'>
-                                Inglês (Conversação)
-                            </p>
-                            <p class='p-content'>
-                                Espanhol (Leitura)
+                            <p class='p-content' ng-repeat='lang in data.cv.langs'>
+                                {{lang}}
                             </p>
                         </div>
                         <div class='cv-card'>
@@ -161,15 +141,15 @@
                             </h2>
                             <img class='cv-tech-icon' src='./src/img/icons/web-icon.png' alt='ícone de web' />
                             <p class='p-content'>
-                                HTML, CSS, JavaScript, ReactJS*, NodeJS*
+                                {{data.cv.techs.web}}
                             </p>
                             <img class='cv-tech-icon' src='./src/img/icons/mobile-icon.png' alt='ícone de mobile' />
                             <p class='p-content'>
-                                React Native*
+                                {{data.cv.techs.mobile}}
                             </p>
                             <img class='cv-tech-icon' src='./src/img/icons/db-icon.png' alt='ícone de banco de dados' />
                             <p class='p-content'>
-                                MySQL, Postgres, Firebase*
+                                {{data.cv.techs.db}}
                             </p>
                             <span>*em estudo</span>
                         </div>
@@ -179,64 +159,28 @@
                             Objetivo
                         </h2>
                         <p class='p-content cv-p'>
-                            Crescer como desenvolvedor profissional, 
-                            sempre contribuindo com o sucesso do 
-                            ambiente no qual eu estiver inserido.
+                            {{data.cv.objective}}
                         </p>
                         
                         <h2 class='subtitle cv-subtitle' style='margin: 20px'>
                             Formação
                         </h2>
-                        <p class='p-content cv-p'>
-                            &rarr; Tecnólogo em Análise e Desenvolvimento de Sistemas. 
-                            Instituto Federal de Educação, Ciência e Tecnologia 
-                            de Roraima - IFRR, Campus Boa Vista, conclusão em 2018.
-                        </p>
-                        <p class='p-content cv-p'>
-                            &rarr; Técnico em Informática com ênfase em Desenvolvimento 
-                            de Sistemas. Instituto Federal de Educação, Ciência e 
-                            Tecnologia de Roraima - IFRR, Campus Boa Vista, 
-                            conclusão em 2015.
-                        </p>
-                        <p class='p-content cv-p'>
-                            &rarr; Auxiliar Técnico em Eletrônica com ênfase em Robótica 
-                            Industrial. Serviço Nacional de Aprendizagem Industrial 
-                            de Roraima - SENAI RR, Unidade Asa Branca, conclusão 
-                            em 2015.
+                        <p class='p-content cv-p' ng-repeat='title in data.cv.titles'>
+                            {{title}}
                         </p>
 
                         <h2 class='subtitle cv-subtitle' style='margin: 20px'>
                             Experiência Profissional
                         </h2>
-                        <p class='p-content cv-p'>
-                            &rarr; 2018 - Centro de Ciência, Tecnologia e Inovação 
-                            de Roraima Cargo: Bolsista Desenvolvedor de Software. 
-                            Principais atividades: Desenvolvimento Mobile com 
-                            React Native.
-                        </p>
-                        <p class='p-content cv-p'>
-                            &rarr; 2017-2018 - Centrais Elétricas do Norte do Brasil S.A. 
-                            Eletronorte Cargo: Estagiário de TI. Principais atividades: 
-                            Desenvolvimento Web com JSF; Suporte e manutenção de TI.
-                        </p>
-                        <p class='p-content cv-p'>
-                            &rarr; 2013-2014 - FIT Manejo Florestal do Brasil LTDA Cargo: 
-                            Aprendiz. Principais atividades: Suporte e manutenção de TI.
+                        <p class='p-content cv-p' ng-repeat='exp in data.cv.exps'>
+                            {{exp}}
                         </p>
 
                         <h2 class='subtitle cv-subtitle' style='margin: 20px'>
                             Eventos
                         </h2>
-                        <p class='p-content cv-p'>
-                            &rarr; Participação na Jungle's Dev Fest 2018 - Manaus, AM
-                        </p>
-                        <p class='p-content cv-p'>
-                            &rarr; Participação na II Semana de Computação e Informática 
-                            de Roraima (SECOINFO/RR 2016) - Boa Vista, RR
-                        </p>
-                        <p class='p-content cv-p'>
-                            &rarr; Participação como Desenvolvedor de Jogos no 
-                            CONNEPI 2014 - São Luiz, MA
+                        <p class='p-content cv-p' ng-repeat='event in data.cv.events'>
+                            {{event}}
                         </p>
 
                     </div>
@@ -254,7 +198,7 @@
                         <div class='contact-email'>
                             <img class='contact-email-icon' src='./src/img/icons/ol-icon.png' alt='Ícone do Outlook'/>
                             <p class='p-content'>
-                                iambarrosodacosta@live.com
+                                {{data.contact.email}}
                             </p>
                         </div>
                         <div class='contact-tel'>
@@ -263,7 +207,7 @@
                                 <img class='contact-wpp-icon' src='./src/img/icons/wpp-icon.png' alt='Ícone do Whatsapp'/>    
                             </div>
                             <p class='p-content'>
-                                +55 95 98400-2013
+                                {{data.contact.tel}}
                             </p>
                         </div>
                     </div>
@@ -291,6 +235,6 @@
         </div>
     </div>
 
-    <script type="text/javascript" src="./src/js/script.js"></script>
+    <script src="./bundle.js"></script>
 </body>
 </html>
