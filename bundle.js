@@ -44,7 +44,7 @@ var data = {
       fb: "https://www.facebook.com/yannzyto",
       ig: "https://www.instagram.com/yannzyto/",
       tt: "https://twitter.com/yannzyto",
-      "in": "https://www.linkedin.com/in/iam-barroso/"
+      in: "https://www.linkedin.com/in/iam-barroso/"
     }
   }
 };
