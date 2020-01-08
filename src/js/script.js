@@ -21,7 +21,7 @@ const data = {
     cv: {
         info: {
             name: "Iam Barroso da Costa",
-            status: "Brasileiro, 22 anos, Solteiro"
+            status: "Brasileiro, 23 anos, Solteiro"
         },
         langs: [
             "Português (Nativo)",
