@@ -63,29 +63,30 @@ body {
         display: none;
     }
 
-    .works-tech-icon {
-        animation: breath 2s infinite;
-    }
+}
 
-    .works-tech-icon-delay1 {
-        animation-delay: 0s;
-    }
+.works-tech-icon {
+    animation: breath 2s infinite;
+}
 
-    .works-tech-icon-delay2 {
-        animation-delay: 0.4s;
-    }
+.works-tech-icon-delay1 {
+    animation-delay: 0s;
+}
 
-    .works-tech-icon-delay3 {
-        animation-delay: 0.8s;
-    }
+.works-tech-icon-delay2 {
+    animation-delay: 0.4s;
+}
 
-    .works-tech-icon-delay4 {
-        animation-delay: 1.2s;
-    }
+.works-tech-icon-delay3 {
+    animation-delay: 0.8s;
+}
 
-    .works-tech-icon-delay5 {
-        animation-delay: 1.6s;
-    }
+.works-tech-icon-delay4 {
+    animation-delay: 1.2s;
+}
+
+.works-tech-icon-delay5 {
+    animation-delay: 1.6s;
 }
 
 @keyframes breath {
