@@ -16,6 +16,8 @@ body {
     transform: translateY(50px);
 }
 
+/* ESTILOS DO MENU */
+
 .nav-bar {
     z-index: 1;
     position: fixed;
@@ -63,39 +65,6 @@ body {
         display: none;
     }
 
-}
-
-.works-tech-icon {
-    animation: breath 2s infinite;
-}
-
-.works-tech-icon-delay1 {
-    animation-delay: 0s;
-}
-
-.works-tech-icon-delay2 {
-    animation-delay: 0.4s;
-}
-
-.works-tech-icon-delay3 {
-    animation-delay: 0.8s;
-}
-
-.works-tech-icon-delay4 {
-    animation-delay: 1.2s;
-}
-
-.works-tech-icon-delay5 {
-    animation-delay: 1.6s;
-}
-
-@keyframes breath {
-    12% {
-        transform: translateY(-15px);
-    }
-    25% {
-        transform: translateY(0px);
-    }
 }
 
 @media (max-width: 900px) {
@@ -149,6 +118,8 @@ body {
     }
 }
 
+/* ESTILOS DA THUMBNAIL */
+
 .header-general {
     height: 600px;
     background-image: url('../img/coding.jpg');
@@ -194,6 +165,8 @@ body {
         height: 100vh;
     }
 }
+
+/* ESTILOS DA SESSÃO SOBRE */
 
 .about-general {
     width: 100%;
@@ -249,6 +222,8 @@ body {
     }
 }
 
+/* ESTILOS DA SESSÃO TRABALHOS */
+
 .works-general {
     background-color: #fff;
     padding: 5% 0;
@@ -294,6 +269,40 @@ body {
     text-decoration: none;
 }
 
+.works-tech-icon {
+    animation: breath 2s infinite;
+}
+
+.works-tech-icon-delay1 {
+    animation-delay: 0s;
+}
+
+.works-tech-icon-delay2 {
+    animation-delay: 0.4s;
+}
+
+.works-tech-icon-delay3 {
+    animation-delay: 0.8s;
+}
+
+.works-tech-icon-delay4 {
+    animation-delay: 1.2s;
+}
+
+.works-tech-icon-delay5 {
+    animation-delay: 1.6s;
+}
+
+@keyframes breath {
+    12% {
+        transform: translateY(-15px);
+    }
+    25% {
+        transform: translateY(0px);
+    }
+}
+
+
 @media (min-width: 901px) {
     .works-contact-link:hover {
         color: #f9f6f2;
@@ -322,6 +331,8 @@ body {
         width: 90% !important;
     }
 }
+
+/* ESTILOS DA SESSÃO CURRICULO */
 
 .cv-general {
     background-color: #9ea9f0;
@@ -415,6 +426,8 @@ Paragraph {
     }
 }
 
+/* ESTILOS DA SESSÃO CONTATO */
+
 .contact-general {
     padding: 5% 0;
     display: flex;
@@ -478,6 +491,8 @@ Paragraph {
         margin-top: 30px;
     }
 }
+
+/* ESTILOS DO RODAPÉ */
 
 .footer-general {
     display: flex;
